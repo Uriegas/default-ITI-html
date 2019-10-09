@@ -1208,7 +1208,7 @@
 			<div class="page-header page-header-light">
 				<div class="page-header-content header-elements-md-inline">
 					<div class="page-title d-flex">
-						<h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Formatos</span> - Agregar Departamentos</h4>
+						<h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Formatos</span> - Editor de Departamentos</h4>
 						<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
 					</div>
 
@@ -1266,7 +1266,7 @@
 				<!-- Form inputs -->
 				<div class="card">
 					<div class="card-header header-elements-inline">
-						<h5 class="card-title">Agregar Departamentos</h5>
+						<h5 class="card-title">Editar Departamentos</h5>
 						<div class="header-elements">
 							<div class="list-icons">
 		                		<a class="list-icons-item" data-action="collapse"></a>
@@ -1277,7 +1277,57 @@
 					</div>
 
 					<div class="card-body">
-						<p class="mb-4">En esta seccion podra agregar nuevos departamentos a la empresa.</p>
+						<p class="mb-4">En esta seccion podra editar o modificar los departamentos existentes en la empresa.</p>
+
+
+
+
+				<!-- Basic initialization -->
+				<div class="card">
+					<div class="card-header header-elements-inline">
+						<h5 class="card-title">Editar Departamentos</h5>
+						<div class="header-elements">
+							<div class="list-icons">
+		                		<a class="list-icons-item" data-action="collapse"></a>
+		                		<a class="list-icons-item" data-action="reload"></a>
+		                		<a class="list-icons-item" data-action="remove"></a>
+		                	</div>
+		                	<tr>
+									<td><button type="button" class="btn btn-light" data-toggle="modal" data-target="#modal_iconified">Editar <i class="icon-pencil7"></i></button></td>
+								</tr>
+	                	</div>
+					</div>
+
+
+	            <!-- Iconified modal -->
+				<div id="modal_iconified" class="modal fade" tabindex="-1">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title"><i class="icon-menu7 mr-2"></i> &nbsp;Editar Departamentos</h5>
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+							</div>
+
+							<div class="modal-body">
+								<div class="alert alert-info alert-dismissible alert-styled-left border-top-0 border-bottom-0 border-right-0">
+					                <span class="font-weight-semibold">Esta a punto de editar un departamento</span>
+					                <button type="button" class="close" data-dismiss="alert">×</button>
+					            </div>
+
+								<h6 class="font-weight-semibold"><i class="icon-law mr-2"></i> Editar departamento seleccionado</h6>
+								<p>El departamento seleccionado sera editado dde forma consiente en el sistema informatico</p>
+
+								<hr>
+							</div>
+
+							<div class="modal-footer">
+								<button class="btn btn-link" data-dismiss="modal"><i class="icon-cross2 font-size-base mr-1"></i> Close</button>
+								<button class="btn bg-primary"><i class="icon-checkmark3 font-size-base mr-1"></i> Save</button>
+							</div>
+						</div>
+					</div>
+				</div>
+						
 
 						<form action="#">
 							<fieldset class="mb-3">
@@ -1285,29 +1335,29 @@
 
 								<div class="form-group row">
 									<label class="col-form-label col-lg-2">Nombre</label>
-									<div class="col-lg-10">
-										<input type="text" class="form-control">
+									<div class="col-lg-10" >
+										<input type="text" class="form-control" placeholder= "Departamento de Finanzas">
 									</div>
 								</div>
 
 								<div class="form-group row">
 									<label class="col-form-label col-lg-2">Seccion</label>
 									<div class="col-lg-10">
-										<input type="password" class="form-control">
+										<input type="password" class="form-control" placeholder="Finanzas">
 									</div>
 								</div>
 
 								<div class="form-group row">
 									<label class="col-form-label col-lg-2">Clave</label>
 									<div class="col-lg-10">
-										<input type="text" class="form-control">
+										<input type="text" class="form-control" placeholder="0471">
 									</div>
 								</div>
 
 								<div class="form-group row">
 									<label class="col-form-label col-lg-2">Resumen Departamento</label>
 									<div class="col-lg-10">
-										<input type="text" class="form-control" readonly value="En esta seccion se despliega la informacion introducida">
+										<input type="text" class="form-control" readonly value="Departamento de Finanzas 0471">
 									</div>
 								</div>
 <!--
@@ -1321,7 +1371,7 @@
 								<div class="form-group row">
 									<label class="col-form-label col-lg-2">Direccion Web</label>
 									<div class="col-lg-10">
-										<input type="text" class="form-control" value="http://">
+										<input type="text" class="form-control" value="http://" placeholder="finanzasempresa.com">
 									</div>
 								</div>
 <!--
@@ -1335,7 +1385,7 @@
 								<div class="form-group row">
 									<label class="col-form-label col-lg-2">Fundacion</label>
 									<div class="col-lg-10">
-										<input type="text" class="form-control" maxlength="4" placeholder="Introduzca el año en que se creó el departamento">
+										<input type="text" class="form-control" maxlength="4" placeholder="1998">
 									</div>
 								</div>
 <!--
